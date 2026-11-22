@@ -12,8 +12,8 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 
-@Table(name = "transactions")
 @Entity
+@Table(name = "transactions")
 public class Transaction {
 
     @Id
@@ -22,7 +22,7 @@ public class Transaction {
     private Long id;
     private String description;
     private BigDecimal amount;
-    private LocalDate date ;
+    private LocalDate date;
 
     @Enumerated(EnumType.STRING)
     private TransactionType type;
@@ -71,6 +71,5 @@ public class Transaction {
     public String getDescription(){
         return description;
     }
-
 
 }
